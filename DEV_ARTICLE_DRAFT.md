@@ -22,17 +22,18 @@ I built **FreelanceFlow AI**, a local-first React and FastAPI web app that turns
 
 ## Demo
 
-Run the backend and frontend locally, open `http://localhost:5173`, click **New project**, load the demo bakery brief, and click **Analyze brief**. Then generate and edit the proposal, scope, milestones, pricing estimate, and invoice draft.
+Run the backend and frontend locally, open `http://localhost:5173`, click **New project**, load the demo bakery brief, and click **Analyze brief**. Then generate and edit the proposal, scope, milestones, pricing estimate, and invoice draft. The local walkthrough is reproducible from the repository; a public deployment is not claimed yet.
 
-Demo link: _add deployed link or video demo before publishing._
+Demo link: _[ADD A VERIFIED DEPLOYED APP URL HERE, OR STATE THAT THE REPOSITORY-BASED LOCAL DEMO IS THE AVAILABLE DEMONSTRATION]_
+The challenge template accepts either a deployed link or a video demo. I am not providing a video; this placeholder must be replaced only after a working deployment has been verified.
 
 ## Code
 
-Repository: _add public GitHub repository link before publishing._
+Repository: [FreelanceFlowAI on GitHub](https://github.com/shrey04kaitke-sys/FreelanceFlowAI)
 
 ## How I Built It
 
-The app uses a React + TypeScript + Vite frontend, a FastAPI + Pydantic backend, SQLite for explicitly saved local history, and Ollama for local inference. There are no paid API keys or cloud AI services.
+The app uses a React + TypeScript + Vite frontend, a FastAPI + Pydantic backend, SQLite for explicitly saved local history, and Ollama for local inference. There are no paid API keys or cloud AI services in the implemented application.
 
 Gemma is the default model through Ollama (`gemma3:1b`, 806 MB in this environment). Qwen (`qwen2.5:3b`) remains an optional fallback. The backend detects installed models and reports the actual model used for each generated artifact in the workspace.
 
@@ -58,9 +59,11 @@ flowchart LR
 - Gemma and Qwen both produced validator-accepted output for three fixed synthetic briefs.
 - The frontend browser flow reached the editable workspace and loaded a real generated analysis.
 
-### Why open-weight AI mattered
+## Why Does Open Innovation Matter?
 
 Client briefs can contain sensitive project information. Local inference avoids sending those briefs to a paid cloud AI API and avoids per-request cloud AI charges, while open-weight models make the workflow inspectable and runnable without a vendor account. The app still depends on local Ollama and the user's operating environment; it is not claimed to be completely offline. The tradeoff is that users must provide their own hardware and review model output.
+
+The current implementation is designed for local use rather than a generic cloud deployment: the backend calls Ollama on the local machine, and optional history is stored in a local SQLite database. The history API has no authentication and is documented for loopback-only use, so I will not expose it publicly without adding authentication and per-user authorization. A hosted demo would need a separately secured deployment architecture and an inference host capable of running Gemma.
 
 ## My First User
 
@@ -74,8 +77,7 @@ No other prize category is claimed.
 
 ## Before publishing
 
-- Add the public repository link.
-- Add a deployed link or video demo.
+- Verify and add a working deployed app link, or keep the local-demo limitation explicit. No video demo is being supplied.
 - Replace the first-user placeholder with actual feedback, or remove the section.
 - Confirm the challenge deadline, eligibility, tags, and template immediately before publishing.
 - Review the AI disclosure and ensure no client information appears in the post or screenshots.
