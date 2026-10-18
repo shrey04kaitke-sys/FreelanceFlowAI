@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #e5edf8; background: #08111f; }
+  body { margin: 0; min-width: 320px; }
+  button, textarea, input, select { font: inherit; }
+}
+
+@layer components {
+  .surface { @apply rounded-2xl border border-slate-800/90 bg-panel/80 shadow-2xl shadow-black/10; }
+  .button-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-violet px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet/80 disabled:cursor-not-allowed disabled:opacity-50; }
+  .button-secondary { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-4 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-violet/70 hover:text-white disabled:opacity-50; }
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.22em] text-cyan; }
+}

@@ -1,0 +1,1 @@
+"""FreelanceFlow AI application package."""
